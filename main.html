@@ -1,0 +1,335 @@
+<!DOCTYPE html>
+<html>
+<title>Web Page Design</title>
+<head>
+<style type="text/css">
+@import url('https://fonts.googleapis.com/css2?family=Source+Sans+Pro:ital,wght@0,200;0,300;0,400;0,600;0,700;1,200;1,300;1,400;1,600&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Oxygen:wght@300&family=Quicksand:wght@300;400;500&family=Source+Sans+Pro:ital,wght@0,200;0,300;0,400;0,600;0,700;1,200;1,300;1,400;1,600&display=swap');
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+.parallax {
+	background: url(startLine.jpg);
+      height: 100%; 
+
+  /* Create the parallax scrolling effect */
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  margin-top: 400 px;
+  }
+
+
+body {
+    background-color: transparent;
+	margin:0;
+	padding:0;
+}
+
+h1 {
+   color: white; 
+   text-align: center;
+   font-family: 'Quicksand', sans-serif;
+   font-size: 50px;
+}
+h2 {
+	color: lightgray;
+	text-align: center;
+    font-family: 'Quicksand', sans-serif;
+	font-size:36 px;
+}
+h3 {
+	color:white;
+	text-align: center;
+	font-family: 'Quicksand', sans-serif;;
+	font-size:30px;
+	padding-top: 20px;
+	
+	}
+p {
+	color:white;
+	text-align: left;
+	font-family: 'Quicksand', sans-serif;;
+	font-size:27px;
+	padding-left:20px;
+	padding-bottom:20px;
+	}
+
+.ParallaxImage {
+    background-attachment: fixed;
+    background-position: 0;
+    background-repeat: no-repeat;
+    background-size: cover;
+	min-height: 500px;
+	    z-index: -10;
+}
+
+  .bg-1 { 
+    background-color: #1abc9c; /* Green */
+    color: #ffffff;
+  }
+
+.ParallaxContent {
+  background: none repeat scroll 0 0 #2581e8;
+  padding: 0px 0;
+  color:#FFF;	
+} 
+
+.ParallaxVideo{ 
+	height: 300px;
+	padding-bottom: 0px;
+    padding-top: 0px; 
+}
+
+.ParallaxVideo video{ 
+    min-width: 100%;
+    position: fixed;
+    top:0;
+    z-index: -10;
+	filter:brightness(50%);
+
+
+}
+
+.container {
+  margin: 0 auto;
+  padding:0 12px;
+}
+
+@media (min-width: 1200px) {
+  .container {
+    width: 1024px;
+  }
+}
+
+.clip-circle {
+  clip-path: circle(60px at center);
+
+
+}
+
+.center {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 50%;
+  }
+  
+  .button {
+  border: none;
+  background-color: #4CAF50; /* Green */
+  border: none;
+  color: white;
+  padding: 8px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 20px;
+  margin: 4px 2px;
+  transition-duration: 0.4s;
+  cursor: pointer;
+  font-family:Quicksand;
+    margin-left: auto;
+  margin-right: auto;
+  width: 50%;
+}
+
+.button1 {
+  background-color: #0c4352; 
+  color: #91cbdb; 
+}
+
+.button1:hover {
+  background-color: #91cbdb;
+  color: #0c4352;
+}
+
+.text-center {
+  text-align: center;
+  background-color:transparent;
+}
+
+/* (A) "SET" THE TIMELINE CONTAINER */
+.vtl {
+  /* (A1) RELATIVE POSITION NECESSARY TO PROPERLY POSITION TIMELINE LATER */
+  position: relative;
+  /* (A2) RESERVE MORE SPACE TO THE LEFT FOR THE TIMELINE */
+  padding: 10px 10px 10px 50px;
+  /* (A3) OPTIONAL WIDTH RESTRICTION */
+  max-width: 400px;
+}
+
+/* (B) DRAW TIMELINE USING ::BEFORE */
+.vtl::before {
+  /* (B1) DRAW THE TIMELINE */
+  content: '';
+  width: 5px;
+  background-color: #1fa9cf;
+  /* (B2) POSITION IT TO THE LEFT */
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 15px;
+}
+
+/* (C) STYLES FOR THE EVENTS */
+div.event {
+  padding: 20px 30px;
+  background-color: #caf2fc;
+  position: relative;
+  border-radius: 6px;
+  margin-bottom: 10px;
+}
+
+/* (D) STYLES FOR THE DATE & TEXT */
+strong.edate {
+  font-size: 1.1em;
+  font-family: Quicksand;
+  font-weight: bold;
+  color: #1fa9cf;
+}
+p.etxt {
+  margin: 10px 0 0 0;
+  color: #222;
+  font-size:1.4em;
+}
+
+/* (E) ADD "SPEECH BUBBLE TRIANGLE" TO THE EVENTS */
+div.event::before {
+  content: '';
+  border: 10px solid transparent;
+  border-right-color: #caf2fc;
+  border-left: 0;
+  position: absolute;
+  top: 20%;
+  left: -10px;
+}
+
+/* (F) ADD A CIRCLE ON THE TIMELINE TO INDICATE AN EVENT */
+div.event::after {
+  content: '';
+  background: #fff;
+  border: 4px solid #1fa9cf;
+  width: 16px;
+  height: 16px;
+  border-radius: 50%;
+  position: absolute;
+  top: 20%;
+  left: -44px;
+}
+
+</style>
+</head>
+<body>
+
+<div class="ParallaxVideo">
+    <video autoplay muted loop width=100% height="auto" >
+        <source src="DJI_0166_trim.mp4" type="video/mp4">
+        
+    </video>
+    <body onload="typeWriter()"></body>
+    <h1 id="demo"></h1>
+	<div id="div1">
+		<h2><i>The journey to be the first female kiteboarder to represent Canada at the Olympic Games</i></h2>
+	</div>
+</div>
+
+
+<div style="padding:0;background-color:#1d2529;margin-top:200px;width:100%">
+	<div style="padding:0;background-color:transparent;width:100%;margin:auto;max-width:800px;position:center;">
+	<h3>The Sport</h3>
+	<p><i><l>Imagine you’re riding two knife blades, about a meter above the water, going 70 kilometers an hour. A kite pulls you along from a harness as you brace your legs against its power. The board is only attached to you by a couple loops for your feet, and there are others around you. You approach the course marker and the fleet squeezes closer together. Carbon flies, lines tangle, some profanities are screamed, and from the carnage emerges a leader.</i></p>
+	<p>This is IKA Formula Kite, the discipline of kiteboarding that has been selected as an event at the 2024 Olympic Games.</p>
+    <div class="text-center">
+		<button class="button button1" onclick="window.location.href='https://formulakite.org/'">Formula Kite Class Website</button>
+	</div>
+	</div>
+	<div style="padding:0;background-color:black;width:100%;margin:auto;max-width:800px;position:center;">
+	<h3>Who am I?</h3>
+	<img style="border-radius:50%;position:center;max-width:400px;" src="pierFoil.jpg" class="center">
+	<p>My name is Emily Bugeja. I am a 22 year old Canadian female sailor, kite foiler, and electrical engineer with a passion for competition and a love of hard work.</p>
+	<p>In 2014, I set a goal to represent Canada at the 2024 Olympic Games in sailing. At the time, with my less than mediocre sailing career, it seemed like a pipe dream. Seven years and a lot of hard work later, this dream is closer than ever to becoming reality.</p>
+	<h3>Sailor</h3>
+	<img style="border-radius:50%;position:center;max-width:400px;" src="youthWorlds_crop.jpg" class="center">
+	<p>I started sailing the optimist when I was 8 years old, and ever since then it’s been hard to get me off the water. Competing since 2010, it’s been a long journey to get to where I am now. Some highlights have been qualifying for and competing at the 2016 Youth Worlds in Auckland New Zealand, and winning a Bronze medal at the 2017 Canada Games in the Women’s 29er Class.</p>
+
+	<h3>Kite Foiler</h3>
+	<img style="border-radius:50%;position:center;max-width:400px;" src="actionShot_crop.jpg" class="center">
+	<p>Claim to fame: I’ve never been upwind on a twin tip. I don’t mind doing things the hard way, and jumped in the deep end with a kite and foil in July of 2020. Now almost having figured out all of the maneuvers and coming top female at the 2021 FORK regatta in Kingston, I look forward to competing internationally in 2022.</p>
+	
+	<h3>Electrical Engineer</h3>
+	<img style="border-radius:50%;position:center;max-width:400px;" src="aquarius.jpg" class="center">
+	<p>...Almost. I will be graduating from Queen's University in Spring, 2022 with my Electrical Engineering degree. I am a total robotics, sensors, and systems nerd always looking for new, creative ways to solve problems. My past experiences include being an Electronics Intern at Nuytco Research Limited, where I worked on sub-sea systems and robotics, and also working as a research assistant in the Offroad Robotics lab at Queen's.</p>
+	<div class="text-center" style="padding-bottom:20px">
+		<button class="button button1">Professional CV</button>
+	</div>
+	</div>
+
+	<div style="padding:0;background-color:transparent;width:100%;margin:auto;max-width:800px;position:center;">
+	<h3 style="padding-bottom:0;margin-bottom=0">The Path to the Games</h3>
+	<p style="text-align:center;margin-top=0;padding-left:0px;"><i>The Big Picture</i></p>
+	<div class="text-center">
+		<button class="button button1">My Journey So Far</button>
+	</div>
+	<img style="position:center;width:15%;min-width:50px;" src="downArrow.png" class="center">
+	<h3>2022</h3>
+	<img style="border-radius:50%;position:center;max-width:250px;width:200%;" src="logoWS.jpg" class="center">
+	<p style="text-align:center;margin-top=0">Train and compete internationally, attending major class events and focused training blocks.</p>
+	<img style="position:center;width:15%;min-width:50px;" src="downArrow.png" class="center">
+	<h3>2023</h3>
+	<img style="position:center;max-width:250px;" src="Santiago2023.png" class="center">
+	<p style="text-align:center;margin-top=0">Qualify for and compete in the 2023 Pan Am Games, earning a Canadian Olympic berth. Continue training and competing internationally with the goal of coming in top 10 at events.</p>
+	<img style="position:center;width:15%;min-width:50px;" src="downArrow.png" class="center">
+	<h3>2024</h3>
+	<img style="position:center;max-width:250px;width:200%;" src="paris2024.png" class="center">
+	<p style="text-align:center;margin-top=0">Goal of medalling at international events, Qualify to represent Canada at Olympic Games. Race in Paris 2024.</p>
+	<p style="text-align:center;margin-top=0;padding-left:0px;"><i>So What's Next?</i></p>
+
+<div class="vtl" style="margin-left:auto;margin-right:auto;width:40%;max-width 100px;">
+  <div class="event">
+    <strong class="edate">December 23 - January 30</strong>
+    <p class="etxt">Winter training and dryland in BC</p>
+  </div>
+  <div class="event">
+    <strong class="edate">January 31 - February 6</strong>
+    <p class="etxt">Training and US Open Regatta in Clearwater, FL</p>
+  </div>
+  <div class="event">
+    <strong class="edate">February 7 - April 3</strong>
+    <p class="etxt">Training block in La Ventana, Mexico</p>
+  </div>
+
+
+
+
+
+</div>
+
+<div class="text-center" style="padding-bottom:20px">
+		<button class="button button1">Extended Timeline</button>
+	</div>
+	<p>Beyond the immediate dates and competitions, I am in the process of finding a job for after graduation. Additionally, I am planning a European training block in the late Summer/early Fall.</p>
+	</div>
+	
+	<h3>How do we get there?</h3>
+	<img style="border-radius:50%;position:center;max-width:400px;" src="bike.jpg" class="center">
+	<
+</div>
+  
+
+
+<script>
+var i = 0;
+var txt = 'The Future is Foiling';
+var speed = 80;
+
+function typeWriter() {
+  if (i < txt.length) {
+    document.getElementById("demo").innerHTML += txt.charAt(i);
+    i++;
+    setTimeout(typeWriter, speed);
+  }
+}
+</script>
+
+</body>
+</html>
