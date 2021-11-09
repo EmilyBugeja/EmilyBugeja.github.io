@@ -92,7 +92,7 @@ p {
 .container {
   text-align: center;
   position: relative;
-  font-size:0px;
+
 }
 
 .centered {
@@ -103,7 +103,6 @@ p {
 @media (min-width: 1200px) {
   .container {
     width: 1024px;
-
   }
 }
 
@@ -255,7 +254,7 @@ div.event::after {
 #content-desktop {display: block;}
 #content-mobile {display: none;}
 
-@media (max-width: 600px) {
+@media (max-device-width: 600px) {
 	#content-desktop {display: none;}
 	#content-mobile {display: block;}
 }
