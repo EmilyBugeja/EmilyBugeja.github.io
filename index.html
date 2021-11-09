@@ -200,6 +200,15 @@ p.etxt {
 	max-width:800px;
 	position:center;
 }
+
+.aboutMe {
+	padding:0;
+	background-color:black;
+	width:100%;
+	margin:auto;
+	max-width:800px;
+	position:center;
+}
 /* (E) ADD "SPEECH BUBBLE TRIANGLE" TO THE EVENTS */
 div.event::before {
   content: '';
@@ -227,11 +236,13 @@ div.event::after {
 @media only screen and (max-width:940px){
 	[class*=intro] {
 		width:100%;
-		margin:5px;
+		//margin:5px;
 		}
 	[class*=button] {
-		width:80%;
+		width:100%;
 	}
+	[class*=aboutMe]{
+	width = 100%}
 		
 }
 </style>
@@ -260,7 +271,7 @@ div.event::after {
 		<button class="button button1" onclick="window.location.href='https://formulakite.org/'">Formula Kite Class Website</button>
 	</div>
 	</div>
-	<div style="padding:0;background-color:black;width:100%;margin:auto;max-width:800px;position:center;">
+	<div class="aboutMe">
 	<h3>Who am I?</h3>
 	<img style="border-radius:50%;position:center;max-width:400px;" src="pierFoil.jpg" class="center">
 	<p>My name is Emily Bugeja. I am a 22 year old Canadian female sailor, kite foiler, and electrical engineer with a passion for competition and a love of hard work.</p>
