@@ -192,7 +192,14 @@ p.etxt {
   color: #222;
   font-size:1.4em;
 }
-
+.intro {
+	padding:0;
+	background-color:transparent;
+	width:100%;
+	margin:auto;
+	max-width:800px;
+	position:center;
+}
 /* (E) ADD "SPEECH BUBBLE TRIANGLE" TO THE EVENTS */
 div.event::before {
   content: '';
@@ -217,6 +224,11 @@ div.event::after {
   left: -44px;
 }
 
+@media only screen and (max-width:768px){
+	[class*=intro] {
+		width:100%
+		}
+}
 </style>
 </head>
 <body>
@@ -235,7 +247,7 @@ div.event::after {
 
 
 <div style="padding:0;background-color:#1d2529;margin-top:200px;width:100%">
-	<div style="padding:0;background-color:transparent;width:100%;margin:auto;max-width:800px;position:center;">
+	<div class="intro">
 	<h3>The Sport</h3>
 	<p><i><l>Imagine you’re riding two knife blades, about a meter above the water, going 70 kilometers an hour. A kite pulls you along from a harness as you brace your legs against its power. The board is only attached to you by a couple loops for your feet, and there are others around you. You approach the course marker and the fleet squeezes closer together. Carbon flies, lines tangle, some profanities are screamed, and from the carnage emerges a leader.</i></p>
 	<p>This is IKA Formula Kite, the discipline of kiteboarding that has been selected as an event at the 2024 Olympic Games.</p>
