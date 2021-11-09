@@ -191,6 +191,12 @@ p.etxt {
   color: #222;
   font-size:1.4em;
 }
+
+.imageBG {
+	background-image: url("mobilePhotoBG.jpg");
+	width:100%;
+	height:auto;
+}
 .intro {
 	padding:0;
 	background-color:transparent;
@@ -232,17 +238,19 @@ div.event::after {
   left: -44px;
 }
 
+#content-desktop {display: block;}
+#content-mobile {display: none;}
+
 @media (max-width: 600px) {
-	.ParallaxVideo {
-		background-image: url("mobilePhotoBG.jpg");
-	}
+	#content-desktop {display: none;}
+	#content-mobile {display: block;}
 }
 
 </style>
 </head>
 <body>
 
-<div class="ParallaxVideo">
+<div class="ParallaxVideo" id="content-desktop">
     <video autoplay muted loop width=100% height="auto" >
         <source src="DJI_0166_Trim3.mp4" type="video/mp4">
         
@@ -254,6 +262,10 @@ div.event::after {
 	</div>
 </div>
 
+<div class="imageBG" id="content-mobile">
+	<h1>The Future is Foiling</h1>
+	<h2><i>The journey to be the first female kiteboarder to represent Canada at the Olympic Games</i></h2>
+</div>
 
 <div style="padding:0;background-color:#1d2529;margin-top:200px;width:100%">
 	<div class="intro">
