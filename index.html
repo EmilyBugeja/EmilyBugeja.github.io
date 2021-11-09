@@ -87,8 +87,6 @@ p {
     top:0;
     z-index: -10;
 	filter:brightness(50%);
-
-
 }
 
 .container {
@@ -234,7 +232,11 @@ div.event::after {
   left: -44px;
 }
 
-
+@media (max-width: 600px) {
+	.ParallaxVideo {
+		background-image: url("mobilePhotoBG.jpg");
+	}
+}
 
 </style>
 </head>
