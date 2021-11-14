@@ -1,0 +1,279 @@
+<!DOCTYPE html>
+<html>
+<title>Professional CV</title>
+<head>
+
+<style type="text/css">
+@import url('https://fonts.googleapis.com/css2?family=Source+Sans+Pro:ital,wght@0,200;0,300;0,400;0,600;0,700;1,200;1,300;1,400;1,600&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Oxygen:wght@300&family=Quicksand:wght@300;400;500&family=Source+Sans+Pro:ital,wght@0,200;0,300;0,400;0,600;0,700;1,200;1,300;1,400;1,600&display=swap');
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+.parallax {
+	background: url(startLine.jpg);
+      height: 100%; 
+
+  /* Create the parallax scrolling effect */
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  margin-top: 400 px;
+  }
+
+
+body {
+    background-color: transparent;
+	margin:0;
+	padding:0;
+}
+
+h1 {
+   color: white; 
+   text-align: center;
+   font-family: 'Quicksand', sans-serif;
+   font-size: 50px;
+}
+h2 {
+	color: lightgray;
+	text-align: center;
+    font-family: 'Quicksand', sans-serif;
+	font-size:36 px;
+}
+h3 {
+	color:white;
+	text-align: center;
+	font-family: 'Quicksand', sans-serif;;
+	font-size:30px;
+	padding-top: 20px;
+	
+	}
+p {
+	color:white;
+	text-align: left;
+	font-family: 'Quicksand', sans-serif;;
+	font-size:27px;
+	padding-left:20px;
+	padding-bottom:20px;
+	}
+
+.ParallaxImage {
+    background-attachment: fixed;
+    background-position: 0;
+    background-repeat: no-repeat;
+    background-size: cover;
+	min-height: 500px;
+	    z-index: -10;
+}
+
+  .bg-1 { 
+    background-color: #1abc9c; /* Green */
+    color: #ffffff;
+  }
+
+.ParallaxContent {
+  background: none repeat scroll 0 0 #2581e8;
+  padding: 0px 0;
+  color:#FFF;	
+} 
+
+.ParallaxVideo{ 
+	height: 300px;
+	padding-bottom: 0px;
+    padding-top: 0px; 
+}
+
+.ParallaxVideo video{ 
+    min-width: 100%;
+    position: fixed;
+    top:0;
+    z-index: -10;
+	filter:brightness(50%);
+}
+
+.container {
+  text-align: center;
+  position: relative;
+
+}
+
+.centered {
+	position: absolute;
+	top:5%;
+	}
+
+@media (min-width: 1200px) {
+  .container {
+    width: 1024px;
+  }
+}
+
+.clip-circle {
+  clip-path: circle(60px at center);
+
+
+}
+
+.center {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 50%;
+  }
+  
+  .button {
+  border: none;
+  background-color: #4CAF50; /* Green */
+  border: none;
+  color: white;
+  padding: 8px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 20px;
+  margin: 4px 2px;
+  transition-duration: 0.4s;
+  cursor: pointer;
+  font-family:Quicksand;
+    margin-left: auto;
+  margin-right: auto;
+  width: 50%;
+}
+
+.button1 {
+  background-color: #0c4352; 
+  color: #91cbdb; 
+}
+
+.button1:hover {
+  background-color: #91cbdb;
+  color: #0c4352;
+}
+
+.text-center {
+  text-align: center;
+  background-color:transparent;
+}
+
+/* (A) "SET" THE TIMELINE CONTAINER */
+.vtl {
+  /* (A1) RELATIVE POSITION NECESSARY TO PROPERLY POSITION TIMELINE LATER */
+  position: relative;
+  /* (A2) RESERVE MORE SPACE TO THE LEFT FOR THE TIMELINE */
+  padding: 10px 10px 10px 50px;
+  /* (A3) OPTIONAL WIDTH RESTRICTION */
+  max-width: 400px;
+}
+
+/* (B) DRAW TIMELINE USING ::BEFORE */
+.vtl::before {
+  /* (B1) DRAW THE TIMELINE */
+  content: '';
+  width: 5px;
+  background-color: #1fa9cf;
+  /* (B2) POSITION IT TO THE LEFT */
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 15px;
+}
+
+/* (C) STYLES FOR THE EVENTS */
+div.event {
+  padding: 20px 30px;
+  background-color: #caf2fc;
+  position: relative;
+  border-radius: 6px;
+  margin-bottom: 10px;
+}
+
+/* (D) STYLES FOR THE DATE & TEXT */
+strong.edate {
+  font-size: 1.1em;
+  font-family: Quicksand;
+  font-weight: bold;
+  color: #1fa9cf;
+}
+p.etxt {
+  margin: 10px 0 0 0;
+  color: #222;
+  font-size:1.4em;
+}
+
+.imageBG {
+	padding-bottom: 0px;
+    padding-top: 0px; 
+
+}
+
+.imageBG img {
+	filter:brightness(50%);
+	width:100%;
+	z-index:-10;
+	padding=0;
+}
+.intro {
+	padding-top:0px;
+	background-color:transparent;
+	width:100%;
+	margin:auto;
+	max-width:800px;
+	position:center;
+}
+
+.aboutMe {
+	padding:0;
+	background-color:black;
+	width:100%;
+	margin:auto;
+	max-width:800px;
+	position:center;
+}
+/* (E) ADD "SPEECH BUBBLE TRIANGLE" TO THE EVENTS */
+div.event::before {
+  content: '';
+  border: 10px solid transparent;
+  border-right-color: #caf2fc;
+  border-left: 0;
+  position: absolute;
+  top: 20%;
+  left: -10px;
+}
+
+/* (F) ADD A CIRCLE ON THE TIMELINE TO INDICATE AN EVENT */
+div.event::after {
+  content: '';
+  background: #fff;
+  border: 4px solid #1fa9cf;
+  width: 16px;
+  height: 16px;
+  border-radius: 50%;
+  position: absolute;
+  top: 20%;
+  left: -44px;
+}
+
+#content-desktop {display: block;}
+#content-mobile {display: none;}
+
+@media (max-device-width: 600px) {
+	#content-desktop {display: none;}
+	#content-mobile {display: block;}
+}
+
+</style>
+</head>
+<body>
+<div style="padding:0;margin:0;background-color:#1d2529;width:100%">
+	<div style="padding:0;background-color:transtparent;width:100%;margin:auto;max-width:800px;position:center;">
+		<h1>Emily Bugeja</h1>
+		<div class="text-center">
+		<button class="button button1">Download PDF Version</button>
+		</div>
+		<h3>Employment</h3>
+		<p><b>Research Assistant</b> - <i>Offroad Robotics Group, Queen's University</i> - May-Nov 2021</p>
+		
+		<p><b>APSC 200/293 TA</b> - <i>Queen's University</i> - Jan-Dec 2021</p>
+		<p><b>Electronics Intern</b> - <i>Nuytco Research Limited</i> - May-Aug 2020</p>
+	</div>
+</div>
+</body>
+</html>
